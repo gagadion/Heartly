@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Heartly</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;500&display=swap');
+        body {
+            margin: 0;
+            font-family: 'Poppins', 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, #fad0c4, #ff9a9e);
+            color: #333;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background: #ff4b4b;
+            color: white;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content h1 {
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #ff4b4b;
+        }
+        .blog-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .blog-links h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .blog-links button {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #ff4b4b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .blog-links button:hover {
+            background-color: #e63e3e;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #ff4b4b;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Heartly Blog</h1>
+    </header>
+    <main class="content">
+        <h1>Explore Our Blog</h1>
+
+        <!-- Links to Individual Blogs -->
+        <div class="blog-links">
+            <h2>Read Our Featured Blogs</h2>
+            <button onclick="window.location.href='Blog_1_Quick_Tips.html'">5 Quick Tips for a Healthy Heart</button>
+            <button onclick="window.location.href='Blog_2_Exercise_Importance.html'">The Importance of Regular Exercise</button>
+            <button onclick="window.location.href='Blog_3_Heart_Risks.html'">Understanding Heart Health Risks</button>
+        </div>
+
+        <!-- Add Blog Section -->
+        <div class="add-blog">
+            <h2>Write Your Blog</h2>
+            <input type="text" id="blogTitle" placeholder="Enter Blog Title">
+            <textarea id="blogContent" rows="5" placeholder="Write your blog content here..."></textarea>
+            <button onclick="addBlog()">Post Blog</button>
+        </div>
+
+        <!-- User Blogs Section -->
+        <div id="userBlogs">
+            <h2>User Blogs</h2>
+            <!-- User blogs will appear here -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Heartly. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function addBlog() {
+            const title = document.getElementById('blogTitle').value;
+            const content = document.getElementById('blogContent').value;
+            
+            if (title.trim() === '' || content.trim() === '') {
+                alert('Please fill in both the title and content!');
+                return;
+            }
+
+            const userBlogs = document.getElementById('userBlogs');
+            const newBlog = document.createElement('div');
+            newBlog.className = 'blog-post';
+            
+            const blogTitle = document.createElement('h2');
+            blogTitle.textContent = title;
+            newBlog.appendChild(blogTitle);
+
+            const blogContent = document.createElement('p');
+            blogContent.textContent = content;
+            newBlog.appendChild(blogContent);
+
+            userBlogs.appendChild(newBlog);
+
+            // Clear input fields
+            document.getElementById('blogTitle').value = '';
+            document.getElementById('blogContent').value = '';
+        }
+    </script>
+</body>
+</html>
