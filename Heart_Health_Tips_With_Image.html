@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Health Tips - Heartly</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;500&display=swap');
+        body {
+            margin: 0;
+            font-family: 'Poppins', 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, #fad0c4, #ff9a9e);
+            color: #333;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background: #ff4b4b;
+            color: white;
+        }
+        .content {
+            padding: 50px 20px;
+        }
+        .content h1 {
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #ff4b4b;
+        }
+        .content p {
+            font-size: 18px;
+            margin: 10px 0;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            max-width: 200px;
+        }
+        .tips-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .tips-list li {
+            background: #ffffff;
+            margin: 10px 0;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+        .tips-list li:hover {
+            transform: scale(1.03);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #ff4b4b;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Heart Health Tips</h1>
+    </header>
+    <main class="content">
+        <h1>Keep Your Heart Happy ❤️</h1>
+        <div class="image-container">
+            <img src="data:image/png;base64,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" alt="Stethoscope">
+        </div>
+        <p>Your heart is the engine of your body, working tirelessly to keep you alive. Show your heart some love by adopting these simple yet effective tips for better cardiovascular health.</p>
+        <ul class="tips-list">
+            <li><strong>1. Stay Active:</strong> Aim for at least 30 minutes of moderate exercise most days of the week. Activities like walking, cycling, or yoga can improve heart function.</li>
+            <li><strong>2. Eat a Balanced Diet:</strong> Include plenty of fruits, vegetables, whole grains, and lean proteins in your meals. Limit saturated fats, salt, and added sugars.</li>
+            <li><strong>3. Maintain a Healthy Weight:</strong> Excess weight puts extra strain on your heart. A balanced diet combined with regular activity can help you stay in shape.</li>
+            <li><strong>4. Manage Stress:</strong> Chronic stress can take a toll on your heart. Practice relaxation techniques like meditation, deep breathing, or journaling.</li>
+            <li><strong>5. Avoid Smoking:</strong> Smoking damages your blood vessels and heart. If you smoke, seek help to quit and improve your heart health immediately.</li>
+            <li><strong>6. Limit Alcohol:</strong> Moderate alcohol consumption is key. Too much alcohol can raise blood pressure and contribute to heart problems.</li>
+            <li><strong>7. Monitor Your Blood Pressure:</strong> High blood pressure is a silent killer. Check it regularly and take steps to keep it within a healthy range.</li>
+            <li><strong>8. Get Enough Sleep:</strong> Aim for 7-9 hours of quality sleep every night. Poor sleep is linked to heart issues.</li>
+            <li><strong>9. Stay Hydrated:</strong> Drinking enough water helps maintain blood flow and reduces strain on your heart.</li>
+            <li><strong>10. See a Doctor Regularly:</strong> Regular health check-ups can detect and address heart risks before they become serious.</li>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2024 Heartly. All rights reserved.</p>
+    </footer>
+</body>
+</html>
