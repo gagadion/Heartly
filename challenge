@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30-Day Running Challenge</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;500&display=swap');
+        body {
+            font-family: 'Poppins', 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffe6e6;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #ff4b4b;
+            color: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .container {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .container h1 {
+            color: #ff4b4b;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ff4b4b;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>30-Day Running Challenge</h1>
+    </header>
+    <div class="container">
+        <h1>Take the Challenge</h1>
+        <p>
+            Join our 30-Day Running Challenge to boost your heart health and fitness. Post your daily progress pictures
+            with a brief description to inspire others and stay motivated!
+        </p>
+        <!-- Embed Padlet -->
+        <div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4">
+            <p style="padding:0;margin:0">
+                <iframe src="https://padlet.com/embed/5ohpr83f2kxd43rf" frameborder="0" allow="camera;microphone;geolocation" style="width:100%;height:608px;display:block;padding:0;margin:0"></iframe>
+            </p>
+            <div style="display:flex;align-items:center;justify-content:end;margin:0;height:28px">
+                <a href="https://padlet.com?ref=embed" style="display:block;flex-grow:0;margin:0;border:none;padding:0;text-decoration:none" target="_blank">
+                    <div style="display:flex;align-items:center;">
+                        <img src="https://padlet.net/embeds/made_with_padlet_2022.png" width="114" height="28" style="padding:0;margin:0;background:0 0;border:none;box-shadow:none" alt="Made with Padlet">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Heartly. All rights reserved.</p>
+    </footer>
+</body>
+</html>
