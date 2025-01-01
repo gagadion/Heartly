@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Health Quiz - Heartly</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;500&display=swap');
+        body {
+            margin: 0;
+            font-family: 'Poppins', 'Roboto', sans-serif;
+            background: linear-gradient(to bottom right, #ffe6e6, #ffcccc);
+            color: #333;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background: #ff4b4b;
+            color: white;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .content h1 {
+            font-size: 36px;
+            color: #ff4b4b;
+        }
+        .quiz-container {
+            background: #fff;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .quiz-question {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .quiz-option {
+            margin: 10px 0;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+        .quiz-option input {
+            margin-right: 10px;
+        }
+        .submit-button {
+            background-color: #ff4b4b;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .submit-button:hover {
+            background-color: #e63e3e;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #ff4b4b;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Heart Health Quiz ❤️</h1>
+    </header>
+    <main class="content">
+        <h1>Test Your Heart Health 🌟</h1>
+        <div class="quiz-container">
+            <form id="quizForm">
+                <div class="quiz-question">
+                    <p>1. How often do you exercise? 🏃‍♂️</p>
+                    <div class="quiz-option"><input type="radio" name="q1" value="10"> Rarely 😞</div>
+                    <div class="quiz-option"><input type="radio" name="q1" value="30"> Sometimes 🙂</div>
+                    <div class="quiz-option"><input type="radio" name="q1" value="50"> Regularly 💪</div>
+                </div>
+                <div class="quiz-question">
+                    <p>2. How healthy is your diet? 🥗</p>
+                    <div class="quiz-option"><input type="radio" name="q2" value="10"> Poor (junk food often) 😔</div>
+                    <div class="quiz-option"><input type="radio" name="q2" value="30"> Moderate (balanced sometimes) 😊</div>
+                    <div class="quiz-option"><input type="radio" name="q2" value="50"> Excellent (strictly balanced) 🏅</div>
+                </div>
+                <div class="quiz-question">
+                    <p>3. How often do you manage stress effectively? 🧘‍♀️</p>
+                    <div class="quiz-option"><input type="radio" name="q3" value="10"> Rarely 😓</div>
+                    <div class="quiz-option"><input type="radio" name="q3" value="30"> Sometimes 🙂</div>
+                    <div class="quiz-option"><input type="radio" name="q3" value="50"> Always 💆‍♂️</div>
+                </div>
+                <div class="quiz-question">
+                    <p>4. How often do you check your blood pressure? 💉</p>
+                    <div class="quiz-option"><input type="radio" name="q4" value="10"> Never 😟</div>
+                    <div class="quiz-option"><input type="radio" name="q4" value="30"> Sometimes 🩺</div>
+                    <div class="quiz-option"><input type="radio" name="q4" value="50"> Regularly ✅</div>
+                </div>
+                <div class="quiz-question">
+                    <p>5. Do you avoid smoking? 🚭</p>
+                    <div class="quiz-option"><input type="radio" name="q5" value="50"> Yes, completely! 🎉</div>
+                    <div class="quiz-option"><input type="radio" name="q5" value="30"> Sometimes 🚬</div>
+                    <div class="quiz-option"><input type="radio" name="q5" value="10"> No 😞</div>
+                </div>
+                <div class="quiz-question">
+                    <p>6. Do you consume alcohol moderately? 🍷</p>
+                    <div class="quiz-option"><input type="radio" name="q6" value="50"> Yes, rarely 🥂</div>
+                    <div class="quiz-option"><input type="radio" name="q6" value="30"> Occasionally 🍻</div>
+                    <div class="quiz-option"><input type="radio" name="q6" value="10"> No moderation 😢</div>
+                </div>
+                <div class="quiz-question">
+                    <p>7. How much sleep do you get daily? 🛌</p>
+                    <div class="quiz-option"><input type="radio" name="q7" value="10"> Less than 5 hours 😴</div>
+                    <div class="quiz-option"><input type="radio" name="q7" value="30"> 5-6 hours 😌</div>
+                    <div class="quiz-option"><input type="radio" name="q7" value="50"> 7-8 hours or more 🌙</div>
+                </div>
+                <div class="quiz-question">
+                    <p>8. How often do you include fruits/vegetables in your diet? 🍎</p>
+                    <div class="quiz-option"><input type="radio" name="q8" value="10"> Rarely 😔</div>
+                    <div class="quiz-option"><input type="radio" name="q8" value="30"> Occasionally 🥦</div>
+                    <div class="quiz-option"><input type="radio" name="q8" value="50"> Daily 🥗</div>
+                </div>
+                <div class="quiz-question">
+                    <p>9. How frequently do you visit a doctor for a check-up? 🩺</p>
+                    <div class="quiz-option"><input type="radio" name="q9" value="10"> Rarely 😟</div>
+                    <div class="quiz-option"><input type="radio" name="q9" value="30"> Sometimes 🩺</div>
+                    <div class="quiz-option"><input type="radio" name="q9" value="50"> Regularly ✅</div>
+                </div>
+                <div class="quiz-question">
+                    <p>10. How often do you engage in cardio activities? 🏋️‍♂️</p>
+                    <div class="quiz-option"><input type="radio" name="q10" value="10"> Rarely 🚶</div>
+                    <div class="quiz-option"><input type="radio" name="q10" value="30"> Occasionally 🚴</div>
+                    <div class="quiz-option"><input type="radio" name="q10" value="50"> Regularly 🏃‍♂️</div>
+                </div>
+                <button type="button" class="submit-button" onclick="calculateScore()">Submit Quiz</button>
+            </form>
+            <div id="result" style="margin-top: 20px; font-size: 20px; color: #333;"></div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Heartly. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function calculateScore() {
+            const form = document.getElementById('quizForm');
+            let score = 0;
+            const totalQuestions = 10;
+            const answers = new FormData(form);
+
+            for (const value of answers.values()) {
+                score += parseInt(value);
+            }
+
+            const percentage = Math.round((score / (totalQuestions * 50)) * 100);
+            const resultDiv = document.getElementById('result');
+
+            let feedback = "";
+            if (percentage >= 80) {
+                feedback = "🌟 Excellent heart health! Keep up the great work! ❤️";
+            } else if (percentage >= 50) {
+                feedback = "😊 Good effort, but there’s room for improvement! 🌟";
+            } else {
+                feedback = "💔 It’s time to prioritize your heart health. Act now!";
+            }
+
+            resultDiv.innerHTML = `Your Heart Health Score: <strong>${percentage}%</strong><br>${feedback}`;
+        }
+    </script>
+</body>
+</html>
